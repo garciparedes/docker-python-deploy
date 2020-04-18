@@ -1,2 +1,2 @@
 # docker-python-deploy
-Docker image with preinstalled system dependencies to test &amp; deploy python packages.
+Docker image with preinstalled system dependencies to deploy python packages.
