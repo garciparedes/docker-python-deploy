@@ -1,4 +1,4 @@
-FROM python:3.7.3
+FROM python:latest
 
 ENV DISPLAY=:0.0
 
