@@ -4,7 +4,8 @@ ENV DISPLAY=:0.0
 
 RUN apt-get update && \
     apt-get install -y \
-        software-properties-common
+        software-properties-common \
+        gnupg-agent
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A1715D88E1DF1F24 && \
     add-apt-repository ppa:git-core/ppa -y
