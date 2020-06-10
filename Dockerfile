@@ -10,6 +10,6 @@ RUN apt-get update && \
 RUN pip install \
     fabric
 
-RUN git lfs install
+RUN git lfs install --skip-smudge
 
 CMD tail -f /dev/null
