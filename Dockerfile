@@ -20,13 +20,4 @@ RUN pip install \
 
 RUN git lfs install
 
-ARG USER_ID=1000
-ARG GROUP_ID=1000
-ARG USERNAME=user
-
-RUN groupadd -f --gid ${GROUP_ID} ${USERNAME}
-RUN useradd --uid ${USER_ID} --gid ${GROUP_ID} --create-home ${USERNAME}
-
-USER ${USERNAME}
-
 CMD tail -f /dev/null
