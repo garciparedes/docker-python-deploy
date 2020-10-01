@@ -5,26 +5,18 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
 RUN apt-get update && \
     apt-get install -y \
         git-lfs \
-        plantuml \
-        apt-transport-https \
-        ca-certificates \
-        curl \
-        gnupg-agent \
-        software-properties-common \
-        lsb-release
+        plantuml
 
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-
-RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-
-RUN apt-get update && \
-    apt-get install -y \
-    docker-ce \
-    docker-ce-cli \
-    containerd.io
+RUN wget --no-verbose https://download.docker.com/linux/static/stable/x86_64/docker-19.03.9.tgz && \
+        tar xvzf docker-19.03.9.tgz && \
+        mv docker/docker /usr/bin/docker && \
+        chmod +x /usr/bin/docker && \
+        rm -rf docker/
 
 RUN pip install \
-    fabric
+    fabric \
+    docker \
+    docker-compose  
 
 RUN git lfs install
 
