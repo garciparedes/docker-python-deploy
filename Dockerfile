@@ -10,7 +10,8 @@ RUN apt-get update && \
         ca-certificates \
         curl \
         gnupg-agent \
-        software-properties-common
+        software-properties-common \
+        lsb-release
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
