@@ -5,8 +5,7 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
 RUN apt-get update && \
     apt-get install -y \
         git-lfs \
-        plantuml \
-        python3-virtualenv
+        plantuml
 
 RUN wget --no-verbose https://download.docker.com/linux/static/stable/x86_64/docker-19.03.9.tgz && \
         tar xvzf docker-19.03.9.tgz && \
