@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y \
         git-lfs \
         plantuml \
-        gettext-base \
+        gettext-base
 
 RUN wget --no-verbose https://download.docker.com/linux/static/stable/x86_64/docker-19.03.9.tgz && \
         tar xvzf docker-19.03.9.tgz && \
