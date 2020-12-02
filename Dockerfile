@@ -1,4 +1,4 @@
-FROM python:3.7.3
+FROM python:3.7
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
 
