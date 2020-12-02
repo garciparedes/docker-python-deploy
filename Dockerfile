@@ -4,6 +4,7 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
 
 RUN apt-get update && \
     apt-get install -y \
+        software-properties-common \
         git-lfs \
         plantuml \
         gettext-base
