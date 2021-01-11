@@ -8,7 +8,8 @@ RUN apt-get update && \
         gnupg-agent \ 
         git-lfs \
         plantuml \
-        gettext-base
+        gettext-base \
+        fonts-open-sans
 
 RUN wget --no-verbose https://download.docker.com/linux/static/stable/x86_64/docker-19.03.9.tgz && \
         tar xvzf docker-19.03.9.tgz && \
